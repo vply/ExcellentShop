@@ -12,8 +12,6 @@ public class HookPlugin {
     public static final String HUSK_CLAIMS            = "HuskClaims";
     public static final String KINGDOMS               = "Kingdoms";
     public static final String SIMPLE_CLAIM_SYSTEM    = "SimpleClaimSystem";
-    public static final String EXCELLENT_CLAIMS       = "ExcellentClaims";
-    public static final String ADVANCED_REGION_MARKET = "AdvancedRegionMarket";
     public static final String PLOT_SQUARED           = "PlotSquared";
 
     public static final String UPGRADEABLE_HOPPERS = "UpgradeableHoppers";

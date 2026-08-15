@@ -53,14 +53,12 @@ import su.nightexpress.excellentshop.api.shop.Shop;
 import su.nightexpress.excellentshop.api.transaction.ECompletedTransaction;
 import su.nightexpress.excellentshop.api.transaction.ETransactionItem;
 import su.nightexpress.excellentshop.core.Lang;
-import su.nightexpress.excellentshop.integration.claim.ExcellentClaimsHook;
 import su.nightexpress.excellentshop.integration.claim.GriefDefenderHook;
 import su.nightexpress.excellentshop.integration.claim.GriefPreventionHook;
 import su.nightexpress.excellentshop.integration.claim.HuskClaimsHook;
 import su.nightexpress.excellentshop.integration.claim.KingdomsHook;
 import su.nightexpress.excellentshop.integration.claim.LandsHook;
 import su.nightexpress.excellentshop.integration.claim.PlotSquaredClaimHook;
-import su.nightexpress.excellentshop.integration.claim.RegionMarketListener;
 import su.nightexpress.excellentshop.integration.claim.SimpleClaimHook;
 import su.nightexpress.excellentshop.integration.claim.WorldGuardFlags;
 import su.nightexpress.excellentshop.integration.claim.WorldGuardHook;
@@ -331,12 +329,7 @@ public class ChestShopModule extends AbstractShopModule implements PlayerShopMan
             this.loadClaimHook(HookPlugin.KINGDOMS, KingdomsHook::new);
             this.loadClaimHook(HookPlugin.HUSK_CLAIMS, HuskClaimsHook::new);
             this.loadClaimHook(HookPlugin.SIMPLE_CLAIM_SYSTEM, SimpleClaimHook::new);
-            this.loadClaimHook(HookPlugin.EXCELLENT_CLAIMS, ExcellentClaimsHook::new);
             this.loadClaimHook(HookPlugin.PLOT_SQUARED, () -> new PlotSquaredClaimHook(this));
-        }
-
-        if (Plugins.isInstalled(HookPlugin.ADVANCED_REGION_MARKET)) {
-            this.addListener(new RegionMarketListener(this.plugin, this));
         }
 
         if (ChestUtils.isInfiniteStorage()) {

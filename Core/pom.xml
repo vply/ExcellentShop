@@ -38,12 +38,6 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>integration-excellent-claims</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>integration-grief-defender</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -87,12 +81,6 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>integration-world-guard</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>integration-advanced-region-market</artifactId>
             <version>${project.version}</version>
         </dependency>
 
