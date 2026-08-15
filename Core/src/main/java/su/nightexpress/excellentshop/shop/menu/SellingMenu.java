@@ -685,7 +685,8 @@ public class SellingMenu extends AbstractObjectMenu<SellMenuContext> implements 
             worth.store(product.getCurrency(), product.getFinalSellPrice(player, units));
 
             lore.add(this.worthText);
-            builder.with(ShopPlaceholders.GENERIC_WORTH, () -> worth.format(Lang.OTHER_PRICE_DELIMITER.text()));
+            var formatted = worth.format(Lang.OTHER_PRICE_DELIMITER.text());
+            builder.with(ShopPlaceholders.GENERIC_WORTH, () -> formatted.replace("<glyph:moneta>", "\uA418"));
         }
 
         ItemUtil.setLore(modified, builder.build().apply(lore));
